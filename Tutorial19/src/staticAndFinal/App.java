@@ -27,6 +27,7 @@ class Thing {
 		hmap.put(4, "Mark");
 		hmap.put(5, "James");
 		hmap.put(1, "Anthony");
+		hmap.put(6, "Luke");
 		
 		Set mentry = hmap.entrySet();
 		Iterator it = mentry.iterator();
