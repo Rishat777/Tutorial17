@@ -49,6 +49,7 @@ class Olympia {
 	public static void main (String [] args) {
 		reverseString("WElcome");
 	
+		FizzBuzz(100);
 
 	}
 	
@@ -60,5 +61,16 @@ class Olympia {
 			String text = new StringBuilder(str).reverse().substring(1) + str. charAt(0);	
 			System.out.println(text);
 			}
+	
+	public static void FizzBuzz (int num) {
+		for(int i=1; i<num; i++) {
+			if(i %(3*5) == 0) System.out.println("Fizzbuzz");
+			else if (i %3 ==0) System.out.println("Buzz");
+			else if (i %5 ==0) System.out.println("Fizz");
+			else {
+				System.out.println(i);
+			}
+		}
+	}
 }
 
