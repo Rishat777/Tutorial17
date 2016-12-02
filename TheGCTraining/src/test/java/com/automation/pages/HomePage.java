@@ -21,6 +21,7 @@ public class HomePage extends BasePage{
 	}
 	public HomePage click_CategoryMath() {
 		ul.clickElement(By.linkText("Mathematics"));
+		ul.clickElement(null);
 		return this;
 		
 	}
