@@ -1,6 +1,10 @@
 package staticAndFinal;
 
 import java.awt.Font;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 class Thing {
 	
@@ -12,6 +16,24 @@ class Thing {
 	}
 	public static void showInfo() {
 		System.out.println(description);
+		
+		
+		
+	
+	}
+	
+	public static void HashMap() {
+		HashMap<Integer, String > hmap = new HashMap<Integer, String>();
+		hmap.put(4, "Mark");
+		hmap.put(5, "James");
+		hmap.put(1, "Anthony");
+		
+		Set mentry = hmap.entrySet();
+		Iterator it = mentry.iterator();
+		while(it.hasNext()) {
+			Map.Entry me = (Map.Entry)it.next();
+			System.out.println("Value is:" + me.getValue());
+			System.out.println("Key is: " + me.getKey());
 	}
 }
 
@@ -19,7 +41,7 @@ class Thing {
 
 
 
-public class App {
+public static class App {
 
 	public static void main(String[] args) {
 		Font font = new Font("Ariel", Font.BOLD, 24);
@@ -37,6 +59,8 @@ public class App {
 		
 		thing1.showName();
 		thing2.showName();
+		
+		
 	}
-
+}
 }
