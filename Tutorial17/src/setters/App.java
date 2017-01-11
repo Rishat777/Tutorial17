@@ -1,6 +1,10 @@
 package setters;
 
-class Olympia {
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+/*class Olympia extends A{*/
 /*	private String intro;
 	private int age;
 	private String goal;
@@ -46,20 +50,23 @@ class Olympia {
 		System.out.println(bodybuilders.getIntro() + bodybuilders.getAge() + "\n" + bodybuilders.getGoal());
 	}*/
 	
-	public static void main (String [] args) {
-		reverseString("WElcome");
+	public class App extends A{
 	
-		FizzBuzz(100);
+	public static void main (String [] args) {
+		
+		FizzBuzz(100);	
+		A a = new A();
+		a.reverseString("WElcome");
+		
+		
 
 	}
 	
-	public static void reverseString (String str) {
-		if ((str==null)||(str. length()<= 1) )
-
-			System.out.println(str);
-
-			String text = new StringBuilder(str).reverse().substring(1) + str. charAt(0);	
-			System.out.println(text);
+	
+	public void reverseString (String str) {
+		String mytext = str;
+		String reverse = new StringBuilder(mytext).reverse().toString();
+		System.out.println(reverse);
 			}
 	
 	public static void FizzBuzz (int num) {
@@ -70,7 +77,25 @@ class Olympia {
 			else {
 				System.out.println(i);
 			}
+			
 		}
+	
 	}
+	
+	
 }
 
+class A {
+	
+	public void reverseString (String str) {
+		if ((str==null)||(str. length()<= 1) )
+
+			System.out.println(str);
+
+			String text = new StringBuilder(str).reverse().substring(1) + str. charAt(0);	
+			System.out.println(text);
+		
+}
+	
+	
+}
